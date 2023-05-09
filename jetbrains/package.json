@@ -28,13 +28,6 @@
       "subtitle": "JetBrains Toolbox",
       "description": "Search and open JetBrains Toolbox projects",
       "mode": "view"
-    },
-    {
-      "name": "recentMenu",
-      "title": "Open Recent Projects",
-      "subtitle": "JetBrains Toolbox",
-      "description": "Open JetBrains Toolbox projects",
-      "mode": "menu-bar"
     }
   ],
   "preferences": [
