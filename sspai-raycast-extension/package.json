@@ -5,6 +5,7 @@
   "description": "Get The SSPAI RSS",
   "icon": "sspai-icon.png",
   "author": "sgaxun",
+  "owner": "private-store",
   "categories": [
     "News",
     "Web"
