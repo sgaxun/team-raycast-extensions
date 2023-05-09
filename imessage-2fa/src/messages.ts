@@ -23,6 +23,7 @@ function getBaseQuery() {
       left join chat on chat.ROWID = chat_message_join.chat_id
       left join handle on message.handle_id = handle.ROWID
     where message.is_from_me = 0
+      and chat_message_join.chat_id is not null
       and message.text is not null
       and length(message.text) > 0
       and datetime(message.date / 1000000000 + strftime('%s', '2001-01-01'), 'unixepoch', 'localtime') >= datetime('now', '-${lookBackMinutes} minutes', 'localtime')
