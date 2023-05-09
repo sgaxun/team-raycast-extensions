@@ -20,11 +20,6 @@
   ],
   "author": "sgaxun",
   "owner": "private-store",
-  "contributors": [
-    "adrienbaron",
-    "dima-m711",
-    "sgaxun"
-  ],
   "license": "MIT",
   "commands": [
     {
