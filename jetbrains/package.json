@@ -1,0 +1,105 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "jetbrains",
+  "title": "JetBrains Toolbox Recent Projects",
+  "description": "Search and open JetBrains Toolbox projects",
+  "icon": "jb.png",
+  "keywords": [
+    "IntelliJ IDEA",
+    "PyCharm",
+    "WebStorm",
+    "PhpStorm",
+    "Rider",
+    "CLion",
+    "Datalore",
+    "DataSpell",
+    "DataGrip",
+    "RubyMine",
+    "AppCode",
+    "GoLand"
+  ],
+  "author": "sgaxun",
+  "owner": "private-store",
+  "contributors": [
+    "adrienbaron",
+    "dima-m711",
+    "sgaxun"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "recent",
+      "title": "Search Recent Projects",
+      "subtitle": "JetBrains Toolbox",
+      "description": "Search and open JetBrains Toolbox projects",
+      "mode": "view"
+    },
+    {
+      "name": "recentMenu",
+      "title": "Open Recent Projects",
+      "subtitle": "JetBrains Toolbox",
+      "description": "Open JetBrains Toolbox projects",
+      "mode": "menu-bar"
+    }
+  ],
+  "preferences": [
+    {
+      "default": "/usr/local/bin",
+      "description": "Where are JetBrains Tools 'shell scripts' are installed (in Toolbox → Settings → Tools)",
+      "name": "bin",
+      "placeholder": "/usr/local/bin",
+      "required": false,
+      "title": "Shell scripts location",
+      "type": "textfield"
+    },
+    {
+      "default": "~/Library/Application Support/JetBrains/Toolbox",
+      "description": "What is the JetBrains Tools install Location? (in Toolbox → Settings → Tools)",
+      "name": "toolsInstall",
+      "placeholder": "~/Library/Application Support/JetBrains/Toolbox",
+      "required": false,
+      "title": "Tools Install location",
+      "type": "textfield"
+    },
+    {
+      "default": false,
+      "description": "Try to use the jetbrain://app-name protocol url to open projects if tools are not installed (not recommended)",
+      "label": "Enabled",
+      "name": "fallback",
+      "required": false,
+      "title": "Use protocol urls if missing shell scripts",
+      "type": "checkbox"
+    },
+    {
+      "default": false,
+      "description": "Add projects from previous app installs",
+      "label": "Use all",
+      "name": "historic",
+      "required": false,
+      "title": "Use historic project files",
+      "type": "checkbox"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.50.0",
+    "fast-glob": "^3.2.7",
+    "raycast-hooks": "^1.0.4",
+    "which": "^2.0.2",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.5",
+    "@types/glob": "^7.1.4",
+    "@types/node": "^18.8.3",
+    "@types/which": "^2.0.1",
+    "@types/xml2js": "^0.4.9",
+    "eslint": "^7.31.0",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
